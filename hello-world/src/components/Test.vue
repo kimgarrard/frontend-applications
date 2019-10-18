@@ -3,9 +3,10 @@
     <p class="test"></p>
     <h1>{{ title }}</h1>
     <ul>
-      <survey-answer
+      <!-- <survey-answer
         v-bind:results="results"
-      />
+      /> -->
+      <p v-bind: results="results" v-for="result in results" :key="result.title.value">{{ result.title.value }}</p>
     </ul>
   </div>
 </template>
@@ -25,6 +26,7 @@ export default {
     SurveyAnswer
   },
   props: {
+    results: Array
   },
   data () {
     return {

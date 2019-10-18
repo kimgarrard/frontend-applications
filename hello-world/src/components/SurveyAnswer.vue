@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-for="result in results" :key="result.title">{{ result.title.value }}</p>
+    <p v-for="result in results" :key="result.title.value">{{ result.title.value }}</p>
   </div>
 </template>
 
@@ -8,9 +8,6 @@
   export default {
     props: {
       results: Array
-    },
-    data() {
-
     },
     mounted() {
       /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
