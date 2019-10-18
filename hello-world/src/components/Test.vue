@@ -3,10 +3,9 @@
     <p class="test"></p>
     <h1>{{ title }}</h1>
     <ul>
-      <!-- <survey-answer
+      <survey-answer
         v-bind:results="results"
-      /> -->
-      <p v-bind: results="results" v-for="result in results" :key="result.title.value">{{ result.title.value }}</p>
+      />
     </ul>
   </div>
 </template>
@@ -24,9 +23,6 @@ import SurveyAnswer from './SurveyAnswer'
 export default {
   components: {
     SurveyAnswer
-  },
-  props: {
-    results: Array
   },
   data () {
     return {
@@ -74,7 +70,7 @@ export default {
       .then(res => res.json())
       .then(json => {
         this.results = json.results.bindings;
-        console.log(json.results.bindings);
+        // console.log(json.results.bindings);
       })
     }
   }

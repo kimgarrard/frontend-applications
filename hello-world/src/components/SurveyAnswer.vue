@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p v-for="result in results" :key="result.title.value">{{ result.title.value }}</p>
+    <article v-for="result in results" v-bind:key="result.title.value">
+      <h3>{{ result.title.value }}</h3>
+      <img v-bind:src="result.img.value" alt="">
+    </article>
   </div>
 </template>
 
