@@ -1,0 +1,24 @@
+{
+  "name": "tech-treck",
+  "version": "1.0.0",
+  "description": "Tech track framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "begin": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimgarrard/frontend-applications.git"
+  },
+  "author": "Kim Garrard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimgarrard/frontend-applications/issues"
+  },
+  "homepage": "https://github.com/kimgarrard/frontend-applications#readme",
+  "dependencies": {
+    "sparql": "^0.1.3",
+    "vue": "^2.6.10"
+  }
+}
