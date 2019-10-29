@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 import Header from "./components/Header.vue"
 import Instrumenten from './components/Instrumenten.vue';
 
