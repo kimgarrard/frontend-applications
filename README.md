@@ -61,3 +61,11 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 }
 ```
 
+## Features
+
+- [x] Muziekinstrumenten kunnen bekijken
+- [ ] Klikken op cultuurgebied en daarvan de instrumenten bekijken
+- [ ] Muziekinstrumenten op volgorde van tijd gesorteerd
+- [ ] Detailpagina van de instrumenten
+- [ ] Geluid van de instrumenten kunnen horen
+
