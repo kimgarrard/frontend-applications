@@ -20,17 +20,6 @@ Na de installatie herstart je de terminal en check je of vue-cli werkt met
 vue –version
 ```
 
-### Project aanmaken
-
-```bash
-vue create hello-world
-
-cd hello-world
-
-npm run serve
-
-```
-
 ## SPARQL
 
 Naast Vue heb ik ook gebruik gemaakt van SPARQL, dit is mijn code
