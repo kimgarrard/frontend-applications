@@ -76,7 +76,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 
 ### Hulp van anderen
 * Hele Vue team, iedereen helpt elkaar en geeft elkaar tips
-* Kris, heeft mij erg geholpen met de data op mijn pagina weer te geven
+* Kris, heeft mij erg geholpen met de data op mijn pagina weer te kunnen geven
 * Manouk, met haar heb ik veel samen gewerkt
 
 ## Wat ik heb geleerd
