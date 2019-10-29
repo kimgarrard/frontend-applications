@@ -30,9 +30,9 @@ Wanneer deze installatie gelukt is kun je dit project installeren door het volge
 git clone https://github.com/kimgarrard/frontend-applications.git
 ```
 
-## SPARQL
+## Data
 
-Naast Vue heb ik ook gebruik gemaakt van SPARQL, dit is mijn code
+De data die ik heb gebruikt komt van https://collectie.wereldculturen.nl/. Dit is een verzameling van allerlei objecten over de hele wereld van vroeger. Deze data is enorm breed en kan variëren van maskers uit Afrika tot foto's van dansende mensen in Azië. Om de data op te halen gebruik ik SPARQL, dit is mijn code:
 
 ```bash
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -68,3 +68,19 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 - [ ] Detailpagina van de instrumenten
 - [ ] Geluid van de instrumenten kunnen horen
 
+## Bronnen
+* Database van NMVW - https://collectie.wereldculturen.nl/
+* Installeren van Node en Homebrew - https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew
+* Installeren van Vue - https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d
+* Youtube tutorials Vue - https://www.youtube.com/playlist?list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07
+
+### Hulp van anderen
+* Hele Vue team, iedereen helpt elkaar en geeft elkaar tips
+* Kris, heeft mij erg geholpen met de data op mijn pagina weer te geven
+* Manouk, met haar heb ik veel samen gewerkt
+
+## Wat ik heb geleerd
+* Werken met de terminal
+* Werken met het framework Vue
+* Basis van SPARQL
+* SPARQL omzetten in json en op een pagina weergeven
