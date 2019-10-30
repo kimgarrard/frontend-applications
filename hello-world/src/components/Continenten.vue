@@ -1,7 +1,9 @@
 <template>
   <div class="div">
     <section>
-      <button @click.native="$router.push('/afrika')">Afrika</button>
+      <!-- stukje code van Coen -->
+      <router-link to="/instrumenten" class="button">Instrumenten</router-link>
+      <Instrumenten />
     </section>
   </div>
 </template>
@@ -12,13 +14,21 @@
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
 
+import Instrumenten from "./Instrumenten"
+
+export default {
+  components: {
+    Instrumenten
+  }
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
 
-button {
+.button {
     background-color: #ea4e55;
     color: white;
     font-size: 1em;
@@ -26,10 +36,7 @@ button {
     border: none;
     border-radius: 0.5em;
     padding: 1em;
-}
-
-.green {
-  background-color: blue;
+    text-decoration: none;
 }
 
 </style>

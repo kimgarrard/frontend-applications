@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Continenten from '../src/components/Continenten'
-import Afrika from '../src/components/Afrika'
+import Instrumenten from '../src/components/Instrumenten'
 
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
       component: Continenten
     },
     {
-      path: '/afrika',
-      name: 'Afrika',
-      component: Afrika
-    }
+      path: '/instrumenten',
+      name: 'Instrumenten',
+      component: Instrumenten
+    },
   ]
 })
