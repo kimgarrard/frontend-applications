@@ -1,11 +1,18 @@
 <template>
   <div class="div">
-    <img src="https://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/RV//scannr/j4000/4000021.jpg" alt="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
+    <section>
+      <button>Slaginstrumenten</button>
+      <button>Muziekinstrumenten</button>
+      <button>Strijkstokken</button>
+      <button>Fluiten</button>
+      <button>Blaasinstrumenten</button>
+    </section>
     <article v-for="result in results" v-bind:key="result.title.value">
       <a href="">
         <div>
           <h3>{{ result.title.value }}</h3>
-          <p> {{ result.year.value }} <br> {{ result.placeName.value }}</p>
+          <p> {{ result.year.value }} <br> {{ result.placeName.value }}</p> <br>
           <img class="images" v-bind:src="result.img.value" alt="">
         </div>
       </a>
@@ -22,7 +29,6 @@
 export default {
   data () {
     return {
-      title: "Muziekinstrumenten",
       results: []
     }
   },
@@ -57,26 +63,39 @@ export default {
 } LIMIT 28
     `
     this.runQuery(url, query)
+    this.filterSlaginstrumenten()
   },
 
   methods: {
-    // Code van Laurens
+    // Functie code van Laurens
     runQuery(url, query) {
+      // code van Manouk
       const self = this;
       console.log("requesting")
       fetch(url+"?query="+ encodeURIComponent(query) +"&format=json")
       .then(res => res.json())
       .then(json => {
         this.results = json.results.bindings;
-        var results = self.results;
+        // code van Manouk
+        const results = self.results;
 
         // Stukje code van Wiebe
         results.forEach(function(i){
           i.img.value = i.img.value.replace("http", "https");
         })
-
       })
     },
+
+    filterSlaginstrumenten() {
+      const results = self.results;
+      console.log(results);
+
+      // if (results.) {
+      //   return "positive";
+      // } else {
+      //   return "NOT positive";
+      // }
+    }
   }
 }
 
@@ -93,6 +112,22 @@ export default {
     src: url("../fonts/ChaletComprime.ttf") format("truetype");
 }
 
+section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+section button {
+  background-color: #ea4e55;
+  color: white;
+  font-size: 1em;
+  margin: 0 1% 1.5% 1%;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
 h3 {
   position: absolute;
   background-color: white;
@@ -102,7 +137,6 @@ h3 {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: bold;
-  /* font-family: "ChaletComprime"; */
 }
 
 p {
@@ -124,13 +158,14 @@ p {
   margin: 2em;
   max-height: 60vh;
   object-fit: cover;
-  object-position: 0 30%;
+  object-position: 0 38%;
 }
 
 .images {
   max-height: 18em;
   object-fit: cover;
   background-color: grey;
+  margin-top: -5%;
 }
 
 article {

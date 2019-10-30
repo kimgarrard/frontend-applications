@@ -2,13 +2,14 @@
   <div id="app">
     <Header />
     <Instrumenten />
+    <!-- <router-view /> -->
   </div>
 </template>
 
 <script>
 
-import Header from "./components/Header.vue"
-import Instrumenten from './components/Instrumenten.vue';
+import Header from "@/components/Header.vue"
+import Instrumenten from "@/components/Instrumenten.vue"
 
 export default {
   name: 'app',
