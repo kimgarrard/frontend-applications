@@ -1,11 +1,10 @@
 <template>
   <div>
     <nav>
-      <p>Home</p>
-      <p>Muziekinstrumenten</p>
-      <p>Over ons</p>
+      <router-link to="/" class="navtekst">Home</router-link>
+      <router-link to="/instrumenten" class="navtekst">Muziekinstrumenten</router-link>
+      <p class="navtekst">Over ons</p>
     </nav>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
   </div>
 </template>
 
@@ -31,11 +30,24 @@ nav {
   width: 80%;
 }
 
+.navtekst {
+  text-decoration: none;
+  color: #ea4e55;
+  margin: 16px 0px
+}
+
+.navtekst:hover {
+  text-decoration: none;
+  color: grey;
+  margin: 16px 0px;
+}
+
 nav + img {
-  margin: 2em;
+  padding: 2em;
   max-height: 60vh;
   object-fit: cover;
   object-position: 0 38%;
+  width: 100vw;
 }
 
 </style>

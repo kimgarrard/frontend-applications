@@ -1,16 +1,17 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <router-view /> -->
-    <button v-on:click="getAfrikaResults">Afrika!</button>
-    <button v-on:click="getAfrikaResults">Twee</button>
-    <button>Drie</button>
-    <button>Vier</button>
+    <router-view />
+    <!-- <button v-on:click="getAfrikaResults">Afrika</button>
+    <button v-on:click="getAzieResults">Azië</button>
+    <button v-on:click="getOceanieResults">Oceanië</button>
+    <button v-on:click="getAmerikaResults">Amerika</button>
+
+    <button v-on:click="filterFunction">FILTER</button>
 
     <Instrumenten
-      v-if="results.length > 0"
       v-bind:instrumenten="results"
-    />
+    /> -->
   </div>
 </template>
 
@@ -21,55 +22,74 @@
 /*eslint 'no-console':0*/
 
 import Header from "@/components/Header.vue"
-import Instrumenten from "@/components/Instrumenten.vue"
-import queries from './queries.js'
+// import Home from "@/components/Home.vue"
+// import Instrumenten from "@/components/Instrumenten.vue"
+// import queries from './queries.js'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Instrumenten
+    // Instrumenten
   },
-  data () {
-    return {
-      results: [],
-      url: 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-06/sparql'
-    }
-  },
-  mounted() {
-    // Code van Laurens
-    // this.runQuery(this.url, queries.afrikaQuery)
-    queries
-  },
-
-  methods: {
-    // Functie code van Laurens
-    runQuery(url, query) {
-      // code van Manouk
-      const self = this;
-      this.query = query;
-      console.log("requesting")
-      fetch(url+"?query="+ encodeURIComponent(query) +"&format=json")
-      .then(res => res.json())
-      .then(json => {
-        self.results = json.results.bindings;
-        // code van Manouk
-        const results = self.results;
-        // console.log(results);
-
-        // Stukje code van Wiebe
-        results.forEach(function(i){
-          i.img.value = i.img.value.replace("http", "https");
-        })
-      })
-    },
-    getAfrikaResults() {
-      this.runQuery(this.url, queries.afrikaQuery);
-    },
-    getAsiaResults() {
-      this.runQuery(this.url, queries.asiaQuery);
-    }
-  }
+  // data () {
+  //   return {
+  //     results: [],
+  //     filterData: [],
+  //     url: 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-06/sparql'
+  //   }
+  // },
+  // mounted() {
+  //   // Code van Laurens
+  //   // this.runQuery(this.url, queries.afrikaQuery)
+  //   queries
+  // },
+  // //alle functies
+  // methods: {
+  //   // Functie code van Laurens
+  //   runQuery(url, query) {
+  //     // code van Manouk
+  //     const self = this;
+  //     this.query = query;
+  //     console.log("requesting")
+  //     fetch(url+"?query="+ encodeURIComponent(query) +"&format=json")
+  //     .then(res => res.json())
+  //     .then(json => {
+  //       self.results = json.results.bindings;
+  //       // code van Manouk
+  //       const results = self.results;
+  //       // console.log(results);
+  //
+  //       // Stukje code van Wiebe
+  //       results.forEach(function(i){
+  //         i.img.value = i.img.value.replace("http", "https");
+  //       })
+  //     })
+  //   },
+  //   getAfrikaResults() {
+  //     this.runQuery(this.url, queries.afrikaQuery);
+  //   },
+  //   getAzieResults() {
+  //     this.runQuery(this.url, queries.azieQuery);
+  //   },
+  //   getOceanieResults() {
+  //     this.runQuery(this.url, queries.oceanieQuery);
+  //   },
+  //   getAmerikaResults() {
+  //     this.runQuery(this.url, queries.amerikaQuery);
+  //   },
+  //
+  //   // filterFunction() {
+  //   //   let filterData = this.filterData;
+  //   //   this.results.forEach(function(result) {
+  //   //     if(result.title.value === "Muziekinstrument") {
+  //   //       filterData.push(result)
+  //   //     }
+  //   //   })
+  //   //   console.log(filterData)
+  //   // }
+  //
+  // }
 }
 
 
@@ -100,7 +120,4 @@ ul {
   padding: 0;
 }
 
-img {
-  width: 100%;
-}
 </style>

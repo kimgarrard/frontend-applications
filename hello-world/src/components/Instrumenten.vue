@@ -39,22 +39,6 @@ export default {
     src: url("../fonts/ChaletComprime.ttf") format("truetype");
 }
 
-section {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-section button {
-  background-color: #ea4e55;
-  color: white;
-  font-size: 1em;
-  margin: 0 1% 1.5% 1%;
-  border: none;
-  border-radius: 0.5em;
-  padding: 1em;
-}
-
 h3 {
   position: absolute;
   background-color: white;
@@ -64,6 +48,7 @@ h3 {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: bold;
+  width: 27%;
 }
 
 p {
