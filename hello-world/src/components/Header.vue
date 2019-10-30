@@ -5,6 +5,7 @@
       <p>Muziekinstrumenten</p>
       <p>Over ons</p>
     </nav>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
   </div>
 </template>
 
@@ -28,6 +29,13 @@ nav {
   margin: 0% 10%;
   padding: 1em 0;
   width: 80%;
+}
+
+nav + img {
+  margin: 2em;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: 0 38%;
 }
 
 </style>

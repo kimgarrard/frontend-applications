@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Header from '@/components/Header.vue'
-import Instrumenten from '../src/components/Instrumenten'
+import Continenten from '../src/components/Continenten'
+import Afrika from '../src/components/Afrika'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/test',
-      name: 'Test',
-      component: Instrumenten
+      path: '/',
+      name: 'Home',
+      component: Continenten
+    },
+    {
+      path: '/afrika',
+      name: 'Afrika',
+      component: Afrika
     }
   ]
 })

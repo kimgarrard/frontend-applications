@@ -1,18 +1,10 @@
 <template>
   <div class="div">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
-    <section>
-      <button>Afrika</button>
-      <!-- <button>Muziekinstrumenten</button>
-      <button>Strijkstokken</button>
-      <button>Fluiten</button>
-      <button>Blaasinstrumenten</button> -->
-    </section>
     <article v-for="result in results" v-bind:key="result.title.value">
       <a href="">
         <div>
           <h3>{{ result.title.value }}</h3>
-          <p> {{ result.year.value }} <br> {{ result.placeName.value }}</p> <br>
+          <p> {{ result.placeInAfrikaLabel.value }}</p> <br>
           <img class="images" v-bind:src="result.img.value" alt="">
         </div>
       </a>
@@ -46,24 +38,24 @@ export default {
     PREFIX edm: <http://www.europeana.eu/schemas/edm/>
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-    SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
+    SELECT ?cho ?title ?typeLabel ?img ?year ?placeInAfrikaLabel
+    WHERE {
+      <https://hdl.handle.net/20.500.11840/termmaster1248> skos:narrower* ?type .
+      <https://hdl.handle.net/20.500.11840/termmaster3> skos:narrower* ?placeInAfrika .
 
-  <https://hdl.handle.net/20.500.11840/termmaster1248> skos:narrower* ?type .
-  ?type skos:prefLabel ?typeLabel .
-  ?place skos:prefLabel ?placeName .
+      ?type skos:prefLabel ?typeLabel .
+      ?cho edm:object ?type .
+      ?cho dc:title ?title .
+      ?cho edm:isShownBy ?img .
+      OPTIONAL {?cho dct:created ?year } .
+      ?cho dct:spatial ?placeInAfrika .
+      ?placeInAfrika skos:prefLabel ?placeInAfrikaLabel .
 
-  ?cho edm:object ?type .
-  ?cho dc:title ?title .
-  ?cho edm:isShownBy ?img .
-  ?cho dct:created ?year .
-  ?cho dct:spatial ?place .
-
-  FILTER langMatches(lang(?title), "ned")
-  FILTER(xsd:integer(?year) >= 0 && xsd:integer(?year) <= 2000)
-} LIMIT 28
+      FILTER langMatches(lang(?title), "ned")
+      # FILTER(xsd:integer(?year) >= 0 && xsd:integer(?year) <= 2000)
+    }
     `
     this.runQuery(url, query)
-    // this.filterSlaginstrumenten()
   },
 
   methods: {
@@ -78,6 +70,7 @@ export default {
         this.results = json.results.bindings;
         // code van Manouk
         const results = self.results;
+        console.log(results);
 
         // Stukje code van Wiebe
         results.forEach(function(i){
@@ -152,13 +145,6 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
-}
-
-.div > img {
-  margin: 2em;
-  max-height: 60vh;
-  object-fit: cover;
-  object-position: 0 38%;
 }
 
 .images {

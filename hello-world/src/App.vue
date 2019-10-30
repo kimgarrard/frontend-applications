@@ -1,21 +1,23 @@
 <template>
   <div id="app">
     <Header />
-    <Instrumenten />
-    <!-- <router-view /> -->
+    <router-view/>
+    <!-- <Instrumenten /> -->
   </div>
 </template>
 
 <script>
 
 import Header from "@/components/Header.vue"
-import Instrumenten from "@/components/Instrumenten.vue"
+// import Continenten from "@/components/Continenten.vue"
+// import Instrumenten from "@/components/Instrumenten.vue"
 
 export default {
   name: 'app',
   components: {
-    Header,
-    Instrumenten
+    Header
+    // Continenten,
+    // Instrumenten
   }
 }
 
