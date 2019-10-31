@@ -6,7 +6,6 @@
       <button v-on:click="getAzieResults">Azië</button>
       <button v-on:click="getOceanieResults">Oceanië</button>
       <button v-on:click="getAmerikaResults">Amerika</button>
-      <!-- <button v-on:click="filterFunction">FILTER</button> -->
     </section>
     <Instrumenten
       v-bind:instrumenten="results"
