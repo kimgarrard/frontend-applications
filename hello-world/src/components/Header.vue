@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav>
+      <!-- router link to code van Coen -->
       <router-link to="/" class="navtekst">Home</router-link>
       <router-link to="/instrumenten" class="navtekst">Muziekinstrumenten</router-link>
       <p class="navtekst">Over ons</p>

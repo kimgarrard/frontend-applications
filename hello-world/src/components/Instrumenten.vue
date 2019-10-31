@@ -25,14 +25,14 @@ export default {
     instrumenten: null
   },
   created() {
+    // code van Kris
     const instrumenten = this.instrumenten;
-    console.log(instrumenten);
+    // console.log(instrumenten);
   }
 }
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
 

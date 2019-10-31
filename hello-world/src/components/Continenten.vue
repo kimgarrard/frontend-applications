@@ -1,6 +1,7 @@
 <template>
   <div class="div">
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
+    <!-- Opzet v on click functie aanroepen van Kris -->
     <section class="buttons">
       <button v-on:click="getAfrikaResults">Afrika</button>
       <button v-on:click="getAzieResults">Azië</button>
@@ -30,7 +31,6 @@ export default {
   data() {
     return {
       results: [],
-      // filterData: [],
       url: 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-06/sparql'
     }
   },
@@ -39,15 +39,14 @@ export default {
   },
 
   mounted() {
-    // Code van Laurens
-    // this.runQuery(this.url, queries.afrikaQuery)
     queries
   },
+
   //alle functies
   methods: {
     // Functie code van Laurens
     runQuery(url, query) {
-      // code van Manouk
+      // coderegel van Manouk
       const self = this;
       this.query = query;
       console.log("requesting")
@@ -55,7 +54,6 @@ export default {
       .then(res => res.json())
       .then(json => {
         self.results = json.results.bindings;
-        //self.results.push(json.results.bindings);
         // code van Manouk
         const results = self.results;
         console.log(results);
@@ -67,6 +65,7 @@ export default {
       })
     },
 
+    // opzet van Kris
     getAfrikaResults() {
       this.runQuery(this.url, queries.afrikaQuery);
     },
@@ -79,24 +78,11 @@ export default {
     getAmerikaResults() {
       this.runQuery(this.url, queries.amerikaQuery);
     },
-
-    // filterFunction() {
-    //   let filterData = this.filterData;
-    //   this.results.forEach(function(result) {
-    //     if(result.title.value === "Muziekinstrument") {
-    //       filterData.push(result)
-    //     }
-    //   })
-    //   console.log(filterData)
-    // }
-
   }
 }
 
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
 
