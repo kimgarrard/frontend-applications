@@ -1,19 +1,17 @@
 <template>
   <div class="div">
+    <h2>MUZIEKINSTRUMENTEN DOOR DE JAREN HEEN</h2>
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
     <section class="buttons">
       <button v-on:click="getAfrikaResults">Afrika</button>
       <button v-on:click="getAzieResults">Azië</button>
       <button v-on:click="getOceanieResults">Oceanië</button>
       <button v-on:click="getAmerikaResults">Amerika</button>
-
-      <!-- <button v-on:click="filterFunction">FILTER</button> -->
-
-      <!-- stukje code van Coen -->
-      <!-- <router-link to="/instrumenten" class="button">Instrumenten</router-link> -->
+      <button v-on:click="filterFunction">FILTER</button>
     </section>
     <Instrumenten
       v-bind:instrumenten="results"
+      v-bind:filter="filterdata"
     />
   </div>
 </template>
@@ -58,7 +56,7 @@ export default {
         self.results = json.results.bindings;
         // code van Manouk
         const results = self.results;
-        // console.log(results);
+        console.log(results);
 
         // Stukje code van Wiebe
         results.forEach(function(i){
@@ -79,15 +77,15 @@ export default {
       this.runQuery(this.url, queries.amerikaQuery);
     },
 
-    // filterFunction() {
-    //   let filterData = this.filterData;
-    //   this.results.forEach(function(result) {
-    //     if(result.title.value === "Muziekinstrument") {
-    //       filterData.push(result)
-    //     }
-    //   })
-    //   console.log(filterData)
-    // }
+    filterFunction() {
+      let filterData = this.filterData;
+      this.results.forEach(function(result) {
+        if(result.title.value === "Muziekinstrument") {
+          filterData.push(result)
+        }
+      })
+      console.log(filterData)
+    }
 
   }
 }
@@ -98,6 +96,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
+
+.div {
+  width: 100vw;
+}
 
 section {
   display: flex;
@@ -113,6 +115,7 @@ section > button {
   border: none;
   padding: 1em 2em;
   font-weight: bold;
+  border-radius: 0.4em;
 }
 
 section > button:hover {
@@ -120,11 +123,22 @@ section > button:hover {
 }
 
 .div > img {
-  padding: 2em;
+  padding: 1.2em;
   max-height: 60vh;
   object-fit: cover;
   object-position: 0 38%;
-  width: 100vw;
+  width: calc(100% - 2.4em);
+}
+
+h2 {
+  background-color: white;
+  color: #ea4e55;
+  padding: 0.2em 0.5em;
+  margin: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20% 5%;
+  position: absolute;
 }
 
 </style>

@@ -25,15 +25,15 @@ nav {
   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.06);
   color: #ea4e55;
   font-weight: bold;
-  margin: 0% 10%;
+  margin: 0% 20%;
   padding: 1em 0;
-  width: 80%;
+  width: 60%;
 }
 
 .navtekst {
   text-decoration: none;
   color: #ea4e55;
-  margin: 16px 0px
+  margin: 16px 0px;
 }
 
 .navtekst:hover {
