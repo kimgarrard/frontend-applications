@@ -22,7 +22,7 @@ export default {
       ?place skos:prefLabel ?placeName .
 
       FILTER langMatches(lang(?title), "ned")
-    } LIMIT 5
+    } LIMIT 9
   `,
   azieQuery: `
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -47,7 +47,7 @@ export default {
     ?place skos:prefLabel ?placeName .
 
     FILTER langMatches(lang(?title), "ned")
-  } LIMIT 5
+  } LIMIT 9
   `,
   oceanieQuery: `
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -72,7 +72,7 @@ export default {
     ?place skos:prefLabel ?placeName .
 
     FILTER langMatches(lang(?title), "ned")
-  } LIMIT 5
+  } LIMIT 9
   `,
   amerikaQuery: `
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -97,6 +97,6 @@ export default {
     ?place skos:prefLabel ?placeName .
 
     FILTER langMatches(lang(?title), "ned")
-  } LIMIT 5
+  } LIMIT 9
   `,
 }

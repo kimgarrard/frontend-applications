@@ -32,12 +32,12 @@ export default {
   data() {
     return {
       results: [],
-      filterData: [],
+      // filterData: [],
       url: 'https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-06/sparql'
     }
   },
   created() {
-    
+    this.runQuery(this.url, queries.afrikaQuery);
   },
 
   mounted() {
@@ -82,15 +82,15 @@ export default {
       this.runQuery(this.url, queries.amerikaQuery);
     },
 
-    filterFunction() {
-      let filterData = this.filterData;
-      this.results.forEach(function(result) {
-        if(result.title.value === "Muziekinstrument") {
-          filterData.push(result)
-        }
-      })
-      console.log(filterData)
-    }
+    // filterFunction() {
+    //   let filterData = this.filterData;
+    //   this.results.forEach(function(result) {
+    //     if(result.title.value === "Muziekinstrument") {
+    //       filterData.push(result)
+    //     }
+    //   })
+    //   console.log(filterData)
+    // }
 
   }
 }

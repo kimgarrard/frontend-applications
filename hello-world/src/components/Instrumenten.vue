@@ -5,6 +5,7 @@
         <div>
           <h3 v-if="result.title">{{ result.title.value }}</h3>
           <p v-if="result.placeName"> {{ result.placeName.value }}</p> <br>
+          <p v-if="result.year"> {{ result.year.value }}</p>
           <img v-if="result.img" class="images" v-bind:src="result.img.value" alt="">
         </div>
       </a>
@@ -44,7 +45,7 @@ h3 {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: bold;
-  width: 27%;
+  max-width: 27%;
 }
 
 p {
@@ -67,6 +68,7 @@ p {
   object-fit: cover;
   background-color: grey;
   margin-top: -5%;
+  width: 100%;
 }
 
 article {
