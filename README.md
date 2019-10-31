@@ -75,6 +75,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 * Installeren van Node en Homebrew - https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew
 * Installeren van Vue - https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d
 * Youtube tutorials Vue - https://www.youtube.com/playlist?list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07
+* Youtube tutorial routing - https://www.youtube.com/watch?v=mY2MiaYiSdw
 
 ### Hulp van anderen
 * Hele Vue team, iedereen helpt elkaar en geeft elkaar tips
