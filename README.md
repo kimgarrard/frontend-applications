@@ -3,7 +3,7 @@
 ## Het concept
 Een website met oude muziekinstrumenten van over de hele wereld bedoeld voor echt muziekliefhebbers of mensen die geïnteresseerd zijn in kunstgeschiedenis. 
 
-![](hello-world/images/ScreenshotWebapp.png)
+<img width="1680" alt="SceenshotWebapp" src="https://user-images.githubusercontent.com/43337685/67955893-8cd67380-fbf3-11e9-8c72-fd48e29de680.png">
 
 ## Beschrijving
 Ik ga een webapp maken met oude muziekinstrumenten van over de hele wereld, hiervan zie je een titel, uit welk jaar het komt, waar het vandaan komt en een foto. Je kunt de instrumenten zien per cultuurgebied en gesorteerd op tijd, zo kun je als het ware ‘door de tijd heen klikken’. Naast de instrumenten bekijken en filteren kun je ook nog horen wat voor geluid het instrument maakt. De webapp is gemaakt aan de hand van data van de collectie wereldculturen en met het framework Vue. 
@@ -29,6 +29,8 @@ Wanneer deze installatie gelukt is kun je dit project installeren door het volge
 ```bash
 git clone https://github.com/kimgarrard/frontend-applications.git
 ```
+
+Mocht je dit project niet via de terminal willen clonen kan je dit ook clonen door naar mijn repository 'frontend-applications' te gaan en dan op de groene knop met 'clone or download' te klikken. 
 
 ## Data
 
@@ -63,7 +65,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 ## Features
 
 - [x] Muziekinstrumenten kunnen bekijken
-- [ ] Klikken op cultuurgebied en daarvan de instrumenten bekijken
+- [x] Klikken op cultuurgebied en daarvan de instrumenten bekijken
 - [ ] Muziekinstrumenten op volgorde van tijd gesorteerd
 - [ ] Detailpagina van de instrumenten
 - [ ] Geluid van de instrumenten kunnen horen
@@ -73,6 +75,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 * Installeren van Node en Homebrew - https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew
 * Installeren van Vue - https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d
 * Youtube tutorials Vue - https://www.youtube.com/playlist?list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07
+* Youtube tutorial routing - https://www.youtube.com/watch?v=mY2MiaYiSdw
 
 ### Hulp van anderen
 * Hele Vue team, iedereen helpt elkaar en geeft elkaar tips
