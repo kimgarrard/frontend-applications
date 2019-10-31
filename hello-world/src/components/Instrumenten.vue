@@ -35,11 +35,6 @@ export default {
 
 <style scoped>
 
-@font-face {
-    font-family: "ChaletComprime";
-    src: url("../fonts/ChaletComprime.ttf") format("truetype");
-}
-
 h3 {
   position: absolute;
   background-color: white;
