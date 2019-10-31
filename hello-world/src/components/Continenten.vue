@@ -1,6 +1,5 @@
 <template>
   <div class="div">
-    <h2>MUZIEKINSTRUMENTEN DOOR DE JAREN HEEN</h2>
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/COLLECTIE_TROPENMUSEUM_Een_Samo_muzikant_bespeelt_de_muziekboog_TMnr_20010316.jpg" alt="">
     <section class="buttons">
       <button v-on:click="getAfrikaResults">Afrika</button>
@@ -142,7 +141,8 @@ h2 {
   margin: 0.5em;
   font-size: 2em;
   font-weight: bold;
-  margin: 20% 5%;
+  margin: 25% 0%;
+  right: 0;
   position: absolute;
 }
 
