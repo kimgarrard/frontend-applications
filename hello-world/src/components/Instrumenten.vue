@@ -27,7 +27,7 @@ export default {
   created() {
     // code van Kris
     const instrumenten = this.instrumenten;
-    // console.log(instrumenten);
+    console.log(instrumenten);
   }
 }
 
