@@ -3,7 +3,7 @@
 ## Het concept
 Een website met oude muziekinstrumenten van over de hele wereld bedoeld voor echt muziekliefhebbers of mensen die geïnteresseerd zijn in kunstgeschiedenis. 
 
-![](hello-world/images/ScreenshotWebapp)
+![](./hello-world/images/ScreenshotWebapp.png)
 
 ## Beschrijving
 Ik ga een webapp maken met oude muziekinstrumenten van over de hele wereld, hiervan zie je een titel, uit welk jaar het komt, waar het vandaan komt en een foto. Je kunt de instrumenten zien per cultuurgebied en gesorteerd op tijd, zo kun je als het ware ‘door de tijd heen klikken’. Naast de instrumenten bekijken en filteren kun je ook nog horen wat voor geluid het instrument maakt. De webapp is gemaakt aan de hand van data van de collectie wereldculturen en met het framework Vue. 
