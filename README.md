@@ -88,3 +88,4 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 * Basis van SPARQL
 * SPARQL omzetten in json en op een pagina weergeven
 * Filteren met buttons met meerdere queries
+* Gebruik maken van routing met Vue
