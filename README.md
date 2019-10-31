@@ -79,7 +79,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 
 ### Hulp van anderen
 * Hele Vue team, iedereen helpt elkaar en geeft elkaar tips
-* Kris, heeft mij erg geholpen met de data op mijn pagina weer te kunnen geven
+* Kris, heeft mij erg geholpen met de data op mijn pagina weer te kunnen geven en met het filteren
 * Manouk, met haar heb ik veel samen gewerkt
 
 ## Wat ik heb geleerd
@@ -87,3 +87,4 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 * Werken met het framework Vue
 * Basis van SPARQL
 * SPARQL omzetten in json en op een pagina weergeven
+* Filteren met buttons met meerdere queries
