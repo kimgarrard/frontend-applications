@@ -30,6 +30,8 @@ Wanneer deze installatie gelukt is kun je dit project installeren door het volge
 git clone https://github.com/kimgarrard/frontend-applications.git
 ```
 
+Mocht je dit project niet via de terminal willen clonen kan je dit ook clonen door naar mijn repository 'frontend-applications' te gaan en dan op de groene knop met 'clone or download' te klikken. 
+
 ## Data
 
 De data die ik heb gebruikt komt van https://collectie.wereldculturen.nl/. Dit is een verzameling van allerlei objecten over de hele wereld van vroeger. Deze data is enorm breed en kan variëren van maskers uit Afrika tot foto's van dansende mensen in Azië. Om de data op te halen gebruik ik SPARQL, dit is mijn code:
@@ -63,7 +65,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 ## Features
 
 - [x] Muziekinstrumenten kunnen bekijken
-- [ ] Klikken op cultuurgebied en daarvan de instrumenten bekijken
+- [x] Klikken op cultuurgebied en daarvan de instrumenten bekijken
 - [ ] Muziekinstrumenten op volgorde van tijd gesorteerd
 - [ ] Detailpagina van de instrumenten
 - [ ] Geluid van de instrumenten kunnen horen
