@@ -72,6 +72,9 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 - [ ] Detailpagina van de instrumenten
 - [ ] Geluid van de instrumenten kunnen horen
 
+## Nice to haves
+Als ik meer tijd had, had ik graag nog bovenstaande dingen toegevoegd (de checkboxes die niet gecheckt zijn). Ook had ik dan graag nog mijn homepagina mooier gemaakt en meer informatie toegevoegd voor de gebruiker. 
+
 ## Bronnen
 * Database van NMVW - https://collectie.wereldculturen.nl/
 * Installeren van Node en Homebrew - https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew
