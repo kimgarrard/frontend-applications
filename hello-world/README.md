@@ -65,6 +65,7 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 ```
 
 Deze data zeg ik om in json, in mijn console log ziet dat er als volgt uit
+
 <img width="586" alt="json" src="https://user-images.githubusercontent.com/43337685/68013596-a926ee80-fc8d-11e9-8349-e34c086363b3.png">
 
 ## Features
