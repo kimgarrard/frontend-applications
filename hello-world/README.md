@@ -1,5 +1,7 @@
 # Muziekinstrumenten door de jaren heen
 
+[Link naar site](https://thirsty-fermat-9ce612.netlify.com/#/instrumenten)
+
 ## Het concept
 Een website met oude muziekinstrumenten van over de hele wereld bedoeld voor echt muziekliefhebbers of mensen die geïnteresseerd zijn in kunstgeschiedenis. 
 
@@ -62,6 +64,10 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 }
 ```
 
+Deze data zeg ik om in json, in mijn console log ziet dat er als volgt uit
+
+<img width="586" alt="json" src="https://user-images.githubusercontent.com/43337685/68013596-a926ee80-fc8d-11e9-8349-e34c086363b3.png">
+
 ## Features
 
 - [x] Muziekinstrumenten kunnen bekijken
@@ -69,6 +75,9 @@ SELECT ?cho ?title ?typeLabel ?img ?year ?placeName WHERE {
 - [ ] Muziekinstrumenten op volgorde van tijd gesorteerd
 - [ ] Detailpagina van de instrumenten
 - [ ] Geluid van de instrumenten kunnen horen
+
+## Nice to haves
+Als ik meer tijd had, had ik graag nog bovenstaande dingen toegevoegd (de checkboxes die niet gecheckt zijn). Ook had ik dan graag nog mijn homepagina mooier gemaakt en meer informatie toegevoegd voor de gebruiker. 
 
 ## Bronnen
 * Database van NMVW - https://collectie.wereldculturen.nl/
